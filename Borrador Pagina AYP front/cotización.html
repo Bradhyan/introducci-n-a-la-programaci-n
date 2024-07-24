@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización</title>
+    <script src="cotizacion.js"></script>
+    <link rel="stylesheet" href="cotizacion.css">
+</head>
+<body>
+    
+        
+        <form target="_self">
+      <div>
+        <h1>Era de las Tortas</h1>
+        <h3>Añade un producto:</h3>
+      </div>
+      <div>
+        <label for="categoria">categoria:</label>
+        <select name="categoria" required>
+          <option value="">Seleccione Categoría …</option>
+          <option value="fresa">Torta de fresa </option>
+          <option value="zanahoria">Torta de zanahoria</option>
+          <option value="banano">Torta de banano</option>
+          <option value="chocolate">Torta de chocolate</option>
+          <option value="envinada">Torta envinada</option>
+       
+        </select>
+      </div>
+    
+     
+      <div>
+        <label for="cantidad">Cantidad:</label>
+        <input name="cantidad" id="cantidad" class="input" type="number" min=1 max=100 required>
+      </div>
+      <div>
+        <input type="radio" name="size" id="small" value="pequeño" checked><label for="small"> Pequeña de media libra (12 personas)</label>
+        <input type="radio" name="size" id="medium" value="mediano"><label for="medium">Mediano de libra (24 personas)</label>
+        <input type="radio" name="size" id="big" value="grande"><label for="big">Grande de  libra y media (36 personas) </label>
+      </div>
+    
+     
+      <div>
+        <strong> Tipo de decoración:</strong><br>
+        
+        <input type="checkbox" id="chocolate" name="chocolate" value="Chispas de chocolate"><label for="sin_decorar">Sin decorar</label><br>
+        <input type="checkbox" id="chispas" name="chispas" value="Chispas de Colores"><label for="pastillaje">Pastillaje</label><br>
+        <input type="checkbox" id="leche" name="leche" value="Leche Condensada"><label for="crema">Crema</label><br>
+      </div>
+      <div>
+        <input type="submit" id="send-button" name="send-button" class="button">
+        <input type="reset" value="Borrar" class="button">
+      </div>
+    </form>
+    <div class="container" id="container">
+      <input type="button" id="finish" class="button" value="Completar Compra">
+    </div>
+  
+  
+    
+</body>
+</html>
