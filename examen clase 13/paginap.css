@@ -1,0 +1,23 @@
+div h1{
+    text-align: center;
+    color: blue;
+}
+
+.contenido1{
+    text-align: justify;
+    font-family: cursive;
+    padding: 15px;
+}
+
+.imagen{
+    width: 80%;
+    height: auto;
+    align-content: center;
+}
+
+.container .row  {
+
+padding: 35px;
+    text-align: justify
+ 
+}
