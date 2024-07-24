@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRODUCCION JAVASCRIPT</title>
+    <script>
+        //alertas
+       // alert ('Pagina cargada correctamente'); //Esta alerta se muestra cuando se carga completamente la pagina
+
+        //En las alertas tambien puedo pedir información.
+        //Vamos a crear una alerta que pida el nombre ly por medio de otra alerta lo muestre, 
+
+       // var nombre, edad;
+       // nombre=prompt('Ingrese su nombre'); // prompt tambien es una alerta pero con la opción de que el usuario pueda escribir dentro de ella.
+       // edad=prompt ('Ingrese su edad')
+
+        //alert('El nombre ingresado es: '+nombre+ ' y su edad es '+edad+' años');
+        
+        //Vamos a pedir un numero y determinar si eser numero ingresado es par o es impar
+
+        var numero;
+        numero=prompt('ingrese un numero entero para saber si es par o si es impar');
+        var resultado;
+        resultado=parImpar(numero);//aqui tenemos almacenado una funcion que requiere de un parametro 
+        alert ("El numero "+numero+ " es  "+resultado);
+        function parImpar(numero)
+        {
+            if (numero % 2 ==0)
+            {
+                return "par"
+            }
+            else 
+            {
+                return "impar " 
+            }
+        }
+    </script>
+        
+</head>
+
+<body>
+    <h3>Ejemplo de operaciones aritmeticas con JavaScript</h3>
+    <p id="resultado"></p>
+    <P id="resultado2"></P>
+    <script>
+        //1. Vamos a declarar las variables que necesito para hacer las operaciones
+
+        var numero1 =23;
+        var numero2 =18;
+        var suma= numero1 + numero2;
+        var resta= numero1-numero2;
+        //Vamos a llevar lo que hay en las variables suma y resta a HTMl, especificamente al parrafo que tiene como id resultado
+
+        document.getElementById ('resultado').innerHTML="El resultado de la suma desde JavaScrib es de "+suma;
+        // document.getElementById traduce que vamos a traer un elemento de HTML  por medio de su ID.
+
+        //.innerHTML es una función de salida, para escribir elementos de HTML
+
+        document.getElementById('resultado2').innerHTML="El resultado de la resta desde JavaScript es de "+resta;
+
+        //Posibilidades de visualización de JavaScript: En este lenguaje se puede mostrar datos de firerentes maneras
+
+        //1.innerHTML: Esta función nos sirve para esccribir dentro de un elemento de html.
+        // 2.document.write(): Esta funcion nos sirve para escriir en una salida de HTML
+        //3.window.alert():   Esta función nos sirve para escribir en un cuadro de alerta.
+        //4.console.log(): Esta función nos sirve para ir escribiendo en la consola del navegador. 
+
+        
+        </script>
+
+        <!--Un evento en JavaScript es una acción dentro de un elemento de HTML-->
+
+        <button onclick="window.print()">Imprimir esta pagina </button>
+        <!--onclick es uno de los eventos de JavaScript , que solamente funciona cuando le dan click al elemento de HTML-->
+        <!--window.print() Es una función propia de JavaScript que sirve para imprimir la pagina actual-->
+
+        <h3>Mostrar la mascota elegida</h3>
+        <p>Selecciona una mascota</p>
+        <select id="seleccionMascota" onchange=">MostrarMascota()">
+            <option value="Gato">Gato</option>
+            <option value="Perro">Perro</option>
+            <option value="Caballo">Caballo</option>
+            <option value="Tortuga">Tortuga</option>
+        </select>
+
+        <p id="mascota"></p>
+        <script>
+            function MostrarMascota()
+            {
+                //lo primero tenemos que crear una variable que me almacene todas las opciones del select.
+                var mascotas=document.getElementById('seleccionMascota').value;//Aqui ya tenemos todas las mascotas del select por medio del value.
+                //2. Necesitamos mostrar las mascotas seleccionada
+                document.getElementById('mascota').innerHTML="La mascota seleccionada es: "+mascotas;
+            }
+        </script>
+        <!--Del siguiente parrafo, se le va a aplicar algun estilo desde JavaScript-->
+
+        <p id="parrafo" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi rem ea, eveniet perferendis temporibus dignissimos corporis excepturi pariatur? Cupiditate vero, quae dicta odio magnam possimus earum ipsa explicabo doloremque iste.
+        </p>
+        <script>
+            document.getElementById('parrafo').style='font-size:23px; color: blue';
+        </script>
+
+          <!--Del siguiente parrafo,quiero que se muestre solamente cuando le de clic al siguiente boton.-->
+          <p id="parrafo2" style="display: none;" >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, mollitia in cum harum dolorum excepturi ut minima. Ratione distinctio, incidunt sed beatae eius assumenda, dolore suscipit eligendi, maiores aliquam consectetur?
+          </p>
+          <button onclick="mostrarTexto()">Mostrar texto</button>
+          <script>
+              function mostrarTexto()
+              {
+                document.getElementById('parrafo2').style.display='block';
+              }
+          </script>
+          
+
+
+</body>
+</html>
